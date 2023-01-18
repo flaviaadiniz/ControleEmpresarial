@@ -2,8 +2,10 @@ package br.com.ada.controleempresarial.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
-public class Usuario {
+public class Funcionario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,6 +15,7 @@ public class Usuario {
     @Column(unique = true)
     private String cpf;
     private String email;
+    private LocalDate dataDeContratacao;
     private String cep;
     private String logradouro;
     private int numeroDaCasa;
@@ -57,6 +60,14 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public LocalDate getDataDeContratacao() {
+        return dataDeContratacao;
+    }
+
+    public void setDataDeContratacao(LocalDate dataDeContratacao) {
+        this.dataDeContratacao = dataDeContratacao;
     }
 
     public String getCep() {

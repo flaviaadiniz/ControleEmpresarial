@@ -69,7 +69,7 @@ public class Despesa {
         this.id = id;
     }
 
-    
+
     public Long getId() {
         return id;
     }
