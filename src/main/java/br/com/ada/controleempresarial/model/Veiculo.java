@@ -92,5 +92,5 @@ public class Veiculo {
     public void setIpvaVencido(Boolean ipvaVencido) {
         this.ipvaVencido = ipvaVencido;
     }
-    
+
 }

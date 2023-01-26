@@ -13,11 +13,10 @@ public class Usuario {
     @Column(unique = true)
     private String cpf;
     private String email;
-    private String cep;
-    private String logradouro;
-    private int numeroDaCasa;
-    private String bairro;
-    private String estado;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "endereco_id")
+    private Endereco endereco;
 
     public Long getId() {
         return id;
@@ -59,43 +58,5 @@ public class Usuario {
         this.email = email;
     }
 
-    public String getCep() {
-        return cep;
-    }
 
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    public int getNumeroDaCasa() {
-        return numeroDaCasa;
-    }
-
-    public void setNumeroDaCasa(int numeroDaCasa) {
-        this.numeroDaCasa = numeroDaCasa;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
 }
