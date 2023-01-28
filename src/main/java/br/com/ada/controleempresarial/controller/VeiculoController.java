@@ -1,9 +1,8 @@
 package br.com.ada.controleempresarial.controller;
 
 
-import br.com.ada.controleempresarial.model.Funcionario;
+
 import br.com.ada.controleempresarial.model.Veiculo;
-import br.com.ada.controleempresarial.service.FuncionarioService;
 import br.com.ada.controleempresarial.service.VeiculoService;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +31,11 @@ public class VeiculoController {
     @GetMapping("/{id}")
     public Veiculo buscarPorId(@PathVariable Long id) {
         return veiculoService.buscarPorId(id);
+    }
+
+    @GetMapping("/ano/{ano}")
+    public List<Veiculo> buscarPorAno(@PathVariable String ano) {
+        return veiculoService.buscarPorAno(ano);
     }
 
     @DeleteMapping("/{id}")
