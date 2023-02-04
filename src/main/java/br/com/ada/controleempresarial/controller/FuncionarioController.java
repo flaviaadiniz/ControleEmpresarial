@@ -2,9 +2,7 @@ package br.com.ada.controleempresarial.controller;
 
 
 import br.com.ada.controleempresarial.model.Funcionario;
-import br.com.ada.controleempresarial.model.Usuario;
 import br.com.ada.controleempresarial.service.FuncionarioService;
-import br.com.ada.controleempresarial.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

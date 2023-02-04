@@ -1,7 +1,5 @@
 package br.com.ada.controleempresarial.controller;
 
-
-
 import br.com.ada.controleempresarial.model.Veiculo;
 import br.com.ada.controleempresarial.service.VeiculoService;
 import org.springframework.web.bind.annotation.*;
